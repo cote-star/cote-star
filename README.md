@@ -17,13 +17,21 @@ I build production-grade agentic AI systems — evidence-backed, measurable, and
 
 **Let your AI agents talk about each other.**
 
-Local-first CLI for evidence-backed cross-agent context handoffs. One agent reads another agent's work with citations and structured evidence — no copy-pasting, no tab-switching, no guessing.
+Local-first CLI for evidence-backed cross-agent coordination across Codex, Claude, Gemini, and Cursor. One agent reads another's session with citations and structured evidence — no orchestrator required.
 
-- Dual implementation: Node.js + Rust
-- Session diffing, context packs, agent-to-agent messaging, automatic secret redaction
-- Core thesis: multi-agent workflows break when handoffs are memory-based and unverifiable
+- Dual implementation: Node.js + Rust with identical conformance tests
+- Session reads, diffing, comparisons, agent-to-agent messaging, secret redaction
+- Context Pack: 5-doc agent-first repo briefing that eliminates cold-start re-reads
+- Zero npm prod dependencies, works offline, nothing leaves your machine
 
-![Agent Chorus demo](https://raw.githubusercontent.com/cote-star/agent-chorus/main/docs/demo-status.webp)
+![Before/after workflow](https://raw.githubusercontent.com/cote-star/agent-chorus/main/docs/silo-tax-before-after.webp)
+
+| | agent-chorus | CrewAI / AutoGen | ccswarm / claude-squad |
+| :--- | :---: | :---: | :---: |
+| **Approach** | Read-only evidence layer | Full orchestration framework | Parallel agent spawning |
+| **Agents** | Codex, Claude, Gemini, Cursor | Provider-specific | Usually Claude-only |
+| **Dependencies** | Zero npm prod deps | Heavy Python/TS stack | Moderate |
+| **Cold-start solution** | Context Pack | None | None |
 
 Repo: [cote-star/agent-chorus](https://github.com/cote-star/agent-chorus)
 
@@ -34,15 +42,17 @@ Repo: [cote-star/agent-chorus](https://github.com/cote-star/agent-chorus)
 [![License](https://img.shields.io/github/license/cote-star/latchkeyd)](https://github.com/cote-star/latchkeyd/blob/main/LICENSE)
 [![Stars](https://img.shields.io/github/stars/cote-star/latchkeyd?style=social)](https://github.com/cote-star/latchkeyd)
 
-**Keep secrets local. Approve the handoff.**
+**Choose the trust posture before a local tool gets credential-backed access.**
 
-macOS-first local broker for secret-scoped tool execution. A narrower, auditable trust gate between agent wrappers and real tools.
+macOS-first local trust broker for agent-mediated tool execution. Secrets stay local, wrappers and binaries are trust-pinned, and you choose the trust mode per task.
 
-- Swift 6.0, macOS Keychain-backed
-- Trust-pinned wrappers and binaries, hash-based path validation
-- Fail-closed on drift, hijack, or bypass
+- Three shipped modes: **handoff** (env injection), **oneshot** (bounded run), **brokered** (per-operation request)
+- Swift 6.0, macOS Keychain-backed, JSONL audit trail with enforced preflight
+- Fail-closed on drift, hijack, or bypass — defense in depth, not "secure agents solved"
 
-![latchkeyd demo](https://raw.githubusercontent.com/cote-star/latchkeyd/main/docs/assets/terminal-happy-path.webp)
+![Trust modes](https://raw.githubusercontent.com/cote-star/latchkeyd/main/docs/assets/hero-before-after-trust-modes.png)
+
+![Execution modes](https://raw.githubusercontent.com/cote-star/latchkeyd/main/docs/assets/diagram-execution-modes.png)
 
 Repo: [cote-star/latchkeyd](https://github.com/cote-star/latchkeyd)
 
