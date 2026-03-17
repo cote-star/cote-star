@@ -23,6 +23,8 @@ Local-first CLI for evidence-backed cross-agent context handoffs. One agent read
 - Session diffing, context packs, agent-to-agent messaging, automatic secret redaction
 - Core thesis: multi-agent workflows break when handoffs are memory-based and unverifiable
 
+![Agent Chorus demo](https://raw.githubusercontent.com/cote-star/agent-chorus/main/docs/demo-status.webp)
+
 Repo: [cote-star/agent-chorus](https://github.com/cote-star/agent-chorus)
 
 ### latchkeyd
@@ -39,6 +41,8 @@ macOS-first local broker for secret-scoped tool execution. A narrower, auditable
 - Swift 6.0, macOS Keychain-backed
 - Trust-pinned wrappers and binaries, hash-based path validation
 - Fail-closed on drift, hijack, or bypass
+
+![latchkeyd demo](https://raw.githubusercontent.com/cote-star/latchkeyd/main/docs/assets/terminal-happy-path.webp)
 
 Repo: [cote-star/latchkeyd](https://github.com/cote-star/latchkeyd)
 
