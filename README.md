@@ -26,6 +26,8 @@ Local-first CLI for evidence-backed cross-agent coordination across Codex, Claud
 
 ![Before/after workflow](https://raw.githubusercontent.com/cote-star/agent-chorus/main/docs/silo-tax-before-after.webp)
 
+![Handoff demo](https://raw.githubusercontent.com/cote-star/agent-chorus/main/docs/demo-handoff.webp)
+
 | | agent-chorus | CrewAI / AutoGen | ccswarm / claude-squad |
 | :--- | :---: | :---: | :---: |
 | **Approach** | Read-only evidence layer | Full orchestration framework | Parallel agent spawning |
