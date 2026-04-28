@@ -11,7 +11,8 @@ I build production-grade agentic AI systems — evidence-backed, measurable, and
 ### Agent Chorus
 
 [![CI](https://github.com/cote-star/agent-chorus/actions/workflows/ci.yml/badge.svg)](https://github.com/cote-star/agent-chorus/actions/workflows/ci.yml)
-[![Version](https://img.shields.io/badge/version-0.8.0-green.svg)](https://github.com/cote-star/agent-chorus/releases)
+[![npm](https://img.shields.io/npm/v/agent-chorus)](https://www.npmjs.com/package/agent-chorus)
+[![crates.io](https://img.shields.io/crates/v/agent-chorus)](https://crates.io/crates/agent-chorus)
 [![License](https://img.shields.io/github/license/cote-star/agent-chorus)](https://github.com/cote-star/agent-chorus/blob/main/LICENSE)
 [![Stars](https://img.shields.io/github/stars/cote-star/agent-chorus?style=social)](https://github.com/cote-star/agent-chorus)
 
@@ -19,8 +20,8 @@ I build production-grade agentic AI systems — evidence-backed, measurable, and
 
 Local-first CLI for evidence-backed cross-agent coordination across Codex, Claude, Gemini, and Cursor. One agent reads another's session with citations and structured evidence — no orchestrator required.
 
-- Dual implementation: Node.js + Rust with identical conformance tests
-- Session reads, diffing, comparisons, agent-to-agent messaging, secret redaction
+- Dual implementation: Node.js + Rust with conformance-tested parity
+- Session reads, diffs, comparisons, agent messaging, secret redaction
 - Context Pack: 5-doc agent-first repo briefing that eliminates cold-start re-reads
 - Zero npm prod dependencies, works offline, nothing leaves your machine
 
@@ -36,6 +37,25 @@ Local-first CLI for evidence-backed cross-agent coordination across Codex, Claud
 | **Cold-start solution** | Context Pack | None | None |
 
 Repo: [cote-star/agent-chorus](https://github.com/cote-star/agent-chorus)
+
+### Presence Rx
+
+[![License](https://img.shields.io/github/license/cote-star/presence-rx)](https://github.com/cote-star/presence-rx/blob/main/LICENSE)
+[![Stars](https://img.shields.io/github/stars/cote-star/presence-rx?style=social)](https://github.com/cote-star/presence-rx)
+
+**Diagnose. Prescribe. Refuse.**
+
+AI-powered brand diagnostics that finds your blind spots in AI-generated answers, classifies each gap, and refuses to let you overclaim. Built for the Peec AI track at Big Berlin Hack 2026.
+
+- 6-axis blind-spot model: topic, channel, engine, geography, authority, evidence
+- Gap-type classifier distinguishes perception, discovery, and attention gaps — each gets a different fix
+- Blocked-claims register with safe rewrites: the system kills overclaims with receipts
+- 189 passing tests, 3 brands (Nothing Phone, Attio, BMW), full proof chain at every step
+- Pipeline: Peec AI + Gemini + Tavily → Python backend + Next.js interactive dashboard
+
+![Presence Rx walkthrough](https://raw.githubusercontent.com/cote-star/presence-rx/main/docs/demo-assets/presence-rx-walkthrough.webp)
+
+Repo: [cote-star/presence-rx](https://github.com/cote-star/presence-rx)
 
 ### latchkeyd
 
@@ -58,9 +78,24 @@ macOS-first local trust broker for agent-mediated tool execution. Secrets stay l
 
 Repo: [cote-star/latchkeyd](https://github.com/cote-star/latchkeyd)
 
+## Research
+
+### Explorable Recall
+
+An experiment-backed investigation into how AI agents navigate large codebases — and how static context packs change the outcome.
+
+- 78+ graded experiments across 3 repos, 3 agent families
+- Headline: 88% structural correctness (was 50%), 70% fewer files read, 65% fewer tokens
+- Interactive results dashboard and evidence maps
+- Blog draft + research paper in progress
+
+Repo: [cote-star/agent-recall](https://github.com/cote-star/agent-recall)
+
 ## What I Focus On
 
 - Production multi-agent systems and coordination reliability
+- Context engineering — reducing the cold-start and silo taxes
+- AI-powered brand intelligence and evidence-graded analytics
 - LLM/VLM engineering with research-to-production translation
 - Fine-tuning, structured generation, and inference optimization
 - LLMOps, evaluation, and governance for enterprise deployment
